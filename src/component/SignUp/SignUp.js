@@ -1,37 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
-import { SignUpValidationSchema } from '../validation/SignUpValidationSchema';
-import { CssBaseline, Grid, makeStyles, Paper, TextField, Typography, Button } from '@material-ui/core';
+import { CssBaseline, Grid, Paper, TextField, Typography, Button } from '@material-ui/core';
+import { SignUpValidationSchema } from '../../validation/SignUpValidationSchema';
+import useStyles from './styles';
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        height: '100vh'
-    },
-    image: {
-        backgroundImage: 'url(https://source.unsplash.com/random)',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-    },
-    paper: {
-        marginTop: theme.spacing(8),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    formBackground: {
-        backgroundColor: '#FFFFFF',
-    },
-    form: {
-        width: '90%',
-        marginTop: theme.spacing(2),
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-    },
-}));
-
-export const SignUp = () => {
+export const SignUp = ({ updateUserData, updateShowProfile }) => {
     const classes = useStyles();
 
     const formik = useFormik({
@@ -44,7 +17,17 @@ export const SignUp = () => {
         },
         validationSchema: SignUpValidationSchema,
         onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
+            updateUserData({
+                firstName: values.firstName,
+                lastName: values.lastName,
+                email: values.email,
+                password: values.password,
+                confirmPassword: values.confirmPassword,
+            });
+
+            updateShowProfile({
+                profile: true,
+            });
         },
     });
 
