@@ -3,7 +3,8 @@ A simple React application with two pages. A `profile registration page` and a `
 
 * *Date Created*: 25 05 2021
 * *Last Modification Date*: 25 05 2021
-* *URL*: <http://example.com/>
+* *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-tutorial3>
+* *URL*: <https://dhrumil-amish-shah-csci5709-t3.herokuapp.com/>
 
 ### Authors
 * [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
@@ -70,3 +71,17 @@ All deployment options can be found at [https://facebook.github.io/create-react-
 * `Profile Page` background used - <https://www.svgbackgrounds.com/#pattern-randomized>
 * `Profile Page` card idea - <https://material-ui.com/components/cards/>
 * `Random images` courtsey - <https://unsplash.com/> and <https://source.unsplash.com/>
+
+### Instructor
+* [@gmosqueraj](https://github.com/gmosqueraj)
+
+### Teaching Assistants
+* [@pishdude](https://github.com/pishdude)
+* [@GoenkaNikunj97](https://github.com/GoenkaNikunj97)
+* [@shehzeenhooda](https://github.com/shehzeenhooda)
+* [@theyashjaiswal](https://github.com/theyashjaiswal)
+* [@bala-sundeep-d](https://github.com/bala-sundeep-d)
+* [@kshitijp12345](https://github.com/kshitijp12345)
+* [@NeharikaSehgal](https://github.com/NeharikaSehgal)
+* [@shahaadesh5](https://github.com/shahaadesh5)
+* [@smnsingh444](https://github.com/smnsingh444)
