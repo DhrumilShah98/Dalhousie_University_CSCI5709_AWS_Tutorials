@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SignUp } from "./component/SignUp/SignUp";
 import { Profile } from "./component/Profile/Profile";
 
-function App() {
+export const App = () => {
 	const [userData, updateUserData] = useState({
 		firstName: '',
 		lastName: '',
@@ -27,6 +27,4 @@ function App() {
 			}
 		</div>
 	);
-}
-
-export default App;
+};
