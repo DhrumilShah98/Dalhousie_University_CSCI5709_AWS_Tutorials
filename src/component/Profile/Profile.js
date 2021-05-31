@@ -2,7 +2,7 @@ import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, 
 import React from 'react';
 import useStyles from './styles';
 
-export const Profile = ({ userData, updateUserData, showProfile, updateShowProfile }) => {
+export const Profile = ({ userData, updateUserData, updateShowProfile }) => {
     const classes = useStyles();
 
     const goBackToSignUp = () => {
@@ -37,7 +37,7 @@ export const Profile = ({ userData, updateUserData, showProfile, updateShowProfi
                         Coding...
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et fermentum mauris, sit amet lacinia turpis. Integer faucibus dui euismod nisl lacinia posuere. Cras eu leo auctor, pellentesque sem et, commodo tellus. Nullam sagittis dignissim dui.
+                    First and foremost, I love writing code. For me, it is like exercising my mind. Not only did it help me in improving my problem solving and logic building approach, but also to be more confident with my abilities.
                     </Typography>
                 </CardContent>
                 <CardActions>
