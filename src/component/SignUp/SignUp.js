@@ -1,35 +1,117 @@
-import React from 'react';
-import { useFormik } from 'formik';
+import React, { useState } from 'react';
 import { CssBaseline, Grid, Paper, TextField, Typography, Button } from '@material-ui/core';
-import { SignUpValidationSchema } from '../../validation/SignUpValidationSchema';
 import useStyles from './styles';
 
-export const SignUp = ({ updateUserData, updateShowProfile }) => {
+export const SignUp = ({ userData, updateUserData, updateShowProfile }) => {
     const classes = useStyles();
+    const [errors, setErrors] = useState({
+        firstNameValid: false,
+        lastNameValid: false,
+        emailValid: false,
+        passwordValid: false,
+        confirmPasswordValid: false,
+    });
 
-    const formik = useFormik({
-        initialValues: {
-            firstName: '',
-            lastName: '',
-            email: '',
-            password: '',
-            confirmPassword: ''
-        },
-        validationSchema: SignUpValidationSchema,
-        onSubmit: (values) => {
-            updateUserData({
-                firstName: values.firstName,
-                lastName: values.lastName,
-                email: values.email,
-                password: values.password,
-                confirmPassword: values.confirmPassword,
-            });
+    const fieldsValid = () => {
+        if (errors.firstNameValid && errors.lastNameValid && errors.emailValid && errors.passwordValid && errors.confirmPasswordValid) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    const validate = (e) => {
+        switch (e.target.name) {
+            case 'firstName':
+                const isFNameCorrect = RegExp(/^[A-Za-z\d]+$/).test(e.target.value);
+                if (e.target.value === "" || e.target.value === null) {
+                    errors["firstName"] = "First name is required."
+                    errors["firstNameValid"] = false;
+                } else if (!isFNameCorrect) {
+                    errors["firstName"] = "First name can only have alpha-numeric characters."
+                    errors["firstNameValid"] = false;
+                } else {
+                    errors["firstName"] = "";
+                    errors["firstNameValid"] = true;
+                }
+                break;
+            case 'lastName':
+                const isLNameCorrect = RegExp(/^[A-Za-z\d]+$/).test(e.target.value);
+                if (e.target.value === "" || e.target.value === null) {
+                    errors["lastName"] = "Last name is required."
+                    errors["lastNameValid"] = false;
+                } else if (!isLNameCorrect) {
+                    errors["lastName"] = "Last name can only have alpha-numeric characters."
+                    errors["lastNameValid"] = false;
+                } else {
+                    errors["lastName"] = "";
+                    errors["lastNameValid"] = true;
+                }
+                break;
+            case 'email':
+                const isEmailCorrect = RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(e.target.value);
+                if (e.target.value === "" || e.target.value === null) {
+                    errors["email"] = "Email name is required."
+                    errors["emailValid"] = false;
+                } else if (!isEmailCorrect) {
+                    errors["email"] = "Please enter a valid email address."
+                    errors["emailValid"] = false;
+                } else {
+                    errors["email"] = ""
+                    errors["emailValid"] = true;
+                }
+                break;
+            case 'password':
+                const isPasswordCorrect = RegExp(/^[A-Za-z\d@$!%*#?&_]+$/).test(e.target.value);
+                if (e.target.value === "" || e.target.value === null) {
+                    errors["password"] = "Password is required."
+                    errors["passwordValid"] = false;
+                } else if (e.target.value.length < 8) {
+                    errors["password"] = "Password must be at least 8 characters long."
+                    errors["passwordValid"] = false;
+                } else if (!isPasswordCorrect) {
+                    errors["password"] = "Password can only have alpha-numeric and special characters."
+                    errors["passwordValid"] = false;
+                } else {
+                    errors["password"] = ""
+                    errors["passwordValid"] = true;
+                }
+                break;
+            case 'confirmPassword':
+                if (e.target.value === "" || e.target.value === null) {
+                    errors["confirmPassword"] = "Confirm password is required."
+                    errors["confirmPasswordValid"] = false;
+                } else if (e.target.value !== userData.password) {
+                    errors["confirmPassword"] = "Confirm password must match the password field."
+                    errors["confirmPasswordValid"] = false;
+                } else {
+                    errors["confirmPassword"] = ""
+                    errors["confirmPasswordValid"] = true;
+                }
+                break;
+            default:
+                break;
+        }
+        setErrors(errors);
+    };
+
+    const onChange = (e) => {
+        validate(e);
+        updateUserData({
+            ...userData,
+            [e.target.name]: e.target.value
+        });
+    };
+
+    const onSubmit = (e) => {
+        console.log(e.target.elements.firstName.value);
+        e.preventDefault();
+        if (fieldsValid()) {
             updateShowProfile({
                 profile: true,
             });
-        },
-    });
+        }
+    };
 
     return (
         <Grid container component="main" className={classes.root}>
@@ -40,7 +122,7 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                     <Typography component="h1" variant="h3" fontWeight="fontWeightBold">
                         Sign Up
                     </Typography>
-                    <form onSubmit={formik.handleSubmit} className={classes.form} noValidate>
+                    <form onSubmit={onSubmit} className={classes.form} noValidate>
                         <TextField
                             fullWidth
                             margin="normal"
@@ -50,10 +132,10 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                             label="First Name"
                             variant="outlined"
                             required
-                            value={formik.values.firstName}
-                            onChange={formik.handleChange}
-                            error={formik.touched.firstName && Boolean(formik.errors.firstName)}
-                            helperText={formik.touched.firstName && formik.errors.firstName}
+                            value={userData.firstName}
+                            onChange={onChange}
+                            error={errors["firstName"] ? true : false}
+                            helperText={errors["firstName"]}
                         />
                         <TextField
                             fullWidth
@@ -64,10 +146,10 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                             label="Last Name"
                             variant="outlined"
                             required
-                            value={formik.values.lastName}
-                            onChange={formik.handleChange}
-                            error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-                            helperText={formik.touched.lastName && formik.errors.lastName}
+                            value={userData.lastName}
+                            onChange={onChange}
+                            error={errors["lastName"] ? true : false}
+                            helperText={errors["lastName"]}
                         />
                         <TextField
                             fullWidth
@@ -78,10 +160,10 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                             label="Email"
                             variant="outlined"
                             required
-                            value={formik.values.email}
-                            onChange={formik.handleChange}
-                            error={formik.touched.email && Boolean(formik.errors.email)}
-                            helperText={formik.touched.email && formik.errors.email}
+                            value={userData.email}
+                            onChange={onChange}
+                            error={errors["email"] ? true : false}
+                            helperText={errors["email"]}
                         />
                         <TextField
                             fullWidth
@@ -92,10 +174,10 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                             label="Password"
                             variant="outlined"
                             required
-                            value={formik.values.password}
-                            onChange={formik.handleChange}
-                            error={formik.touched.password && Boolean(formik.errors.password)}
-                            helperText={formik.touched.password && formik.errors.password}
+                            value={userData.password}
+                            onChange={onChange}
+                            error={errors["password"] ? true : false}
+                            helperText={errors["password"]}
                         />
                         <TextField
                             fullWidth
@@ -106,12 +188,12 @@ export const SignUp = ({ updateUserData, updateShowProfile }) => {
                             label="Confirm Password"
                             variant="outlined"
                             required
-                            value={formik.values.confirmPassword}
-                            onChange={formik.handleChange}
-                            error={formik.touched.confirmPassword && Boolean(formik.errors.confirmPassword)}
-                            helperText={formik.touched.confirmPassword && formik.errors.confirmPassword}
+                            value={userData.confirmPassword}
+                            onChange={onChange}
+                            error={errors["confirmPassword"] ? true : false}
+                            helperText={errors["confirmPassword"]}
                         />
-                        <Button className={classes.submit} color="secondary" variant="contained" fullWidth type="submit">
+                        <Button disabled={!fieldsValid()} className={classes.submit} color="secondary" variant="contained" fullWidth type="submit">
                             Submit
                         </Button>
                     </form>
