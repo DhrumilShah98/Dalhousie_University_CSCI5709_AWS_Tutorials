@@ -19,9 +19,11 @@ export const App = () => {
 		<div className="App">
 			{(showProfile.profile) ?
 				<Profile
-					userData={userData} updateUserData={updateUserData}
+					userData={userData}
+					updateUserData={updateUserData}
 					updateShowProfile={updateShowProfile} /> :
 				<SignUp
+					userData={userData}
 					updateUserData={updateUserData}
 					updateShowProfile={updateShowProfile} />
 			}
