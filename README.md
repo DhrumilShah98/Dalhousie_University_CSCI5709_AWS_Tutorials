@@ -2,7 +2,7 @@
 A simple React application with two pages. A `profile registration page` and a `profile page`.
 
 * *Date Created*: 25 05 2021
-* *Last Modification Date*: 25 05 2021
+* *Last Modification Date*: 02 06 2021
 * *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-tutorial3>
 * *URL*: <https://dhrumil-amish-shah-csci5709-t3.herokuapp.com/>
 
@@ -71,6 +71,7 @@ All deployment options can be found at [https://facebook.github.io/create-react-
 * `Profile Page` background used - <https://www.svgbackgrounds.com/#pattern-randomized>
 * `Profile Page` card idea - <https://material-ui.com/components/cards/>
 * `Random images` courtsey - <https://unsplash.com/> and <https://source.unsplash.com/>
+* `Email regex` source - <https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript>
 
 ### Instructor
 * [@gmosqueraj](https://github.com/gmosqueraj)
