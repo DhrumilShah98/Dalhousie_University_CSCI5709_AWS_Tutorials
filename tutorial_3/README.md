@@ -1,10 +1,16 @@
-# CSCI5709 All Tutorials
+# CSCI5709 Tutorial 3 - Front-End Frameworks
+A simple React application with two pages. A `profile registration page` and a `profile page`.
 
 * *Date Created*: 25 05 2021
-* *Last Modification Date*: 24 06 2021
+* *Last Modification Date*: 02 06 2021
+* *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-tutorial3>
+* *URL*: <https://dhrumil-amish-shah-csci5709-t3.herokuapp.com/>
 
 ### Authors
 * [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
+
+### Getting Started with Create React App
+* This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). According to the [React Documentation](https://reactjs.org/docs/create-a-new-react-app.html) create-react-app is one of the officially supported ways to create single-page applications in React.
 
 ### Prerequisites
 To have a local copy of this lab up and running on your local machine, you will first need to install the following software / libraries / plug-ins
@@ -59,6 +65,13 @@ All deployment options can be found at [https://facebook.github.io/create-react-
 * [GitHub](https://github.com/) - The version control tool
 * [Visual Studio Code](https://code.visualstudio.com/download) - The source code editor used
 * [Google Chrome](https://www.google.com/intl/en_in/chrome/) - Browser used to visualize the changes
+
+### Acknowledgments
+* `Profile Registration` design inspiration - <https://dribbble.com/shots/13906301-Signup-form>
+* `Profile Page` background used - <https://www.svgbackgrounds.com/#pattern-randomized>
+* `Profile Page` card idea - <https://material-ui.com/components/cards/>
+* `Random images` courtsey - <https://unsplash.com/> and <https://source.unsplash.com/>
+* `Email regex` source - <https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript>
 
 ### Instructor
 * [@gmosqueraj](https://github.com/gmosqueraj)
