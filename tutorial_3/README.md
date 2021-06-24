@@ -2,8 +2,8 @@
 A simple React application with two pages. A `profile registration page` and a `profile page`.
 
 * *Date Created*: 25 05 2021
-* *Last Modification Date*: 02 06 2021
-* *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-tutorial3>
+* *Last Modification Date*: 24 06 2021
+* *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_3>
 * *URL*: <https://dhrumil-amish-shah-csci5709-t3.herokuapp.com/>
 
 ### Authors
