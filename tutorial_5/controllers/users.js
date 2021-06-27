@@ -58,18 +58,19 @@ export const addUser = async (req, res) => {
     try {
         const emailExists = "email" in newUser;
         const firstNameExists = "firstName" in newUser;
-        const idExists = "id" in newUser;
-        const userFieldsExistInResponse = emailExists && firstNameExists && idExists;
-        if (userFieldsExistInResponse) {
+        const userFieldsExistInResponse = emailExists && firstNameExists;
+        if (userFieldsExistInResponse && newUser["email"].length > 0 && newUser["firstName"].length > 0) {
             if (users.length === 0) {
+                newUser["id"] = "" + (users.length + 1);
                 users.push(newUser);
                 return res.status(200).json({
                     message: 'User added',
                     success: true
                 });
             } else {
-                const oldUser = users.find((user) => user["id"] === newUser["id"] || user["email"] === newUser["email"]);
+                const oldUser = users.find((user) => user["email"] === newUser["email"]);
                 if (oldUser === undefined || oldUser === null) {
+                    newUser["id"] = "" + (users.length + 1);
                     users.push(newUser);
                     return res.status(200).json({
                         message: 'User added',
@@ -102,9 +103,8 @@ export const updateUser = async (req, res) => {
     try {
         const emailExists = "email" in userToUpdate;
         const firstNameExists = "firstName" in userToUpdate;
-        const idExists = "id" in userToUpdate;
-        const userFieldsExistInResponse = emailExists && firstNameExists && idExists;
-        if ((userFieldsExistInResponse) && (userToUpdate["id"] === userId)) {
+        const userFieldsExistInResponse = emailExists && firstNameExists;
+        if (userFieldsExistInResponse && userToUpdate["email"].length > 0 && userToUpdate["firstName"].length > 0) {
             if (users.length === 0) {
                 return res.status(404).json({
                     message: 'User not found',
@@ -113,6 +113,7 @@ export const updateUser = async (req, res) => {
             } else {
                 const userFoundIndex = users.findIndex((user) => user["id"] === userId);
                 if (userFoundIndex >= 0) {
+                    userToUpdate["id"] = userId;
                     users[userFoundIndex] = userToUpdate;
                     return res.status(200).json({
                         message: 'User updated',
