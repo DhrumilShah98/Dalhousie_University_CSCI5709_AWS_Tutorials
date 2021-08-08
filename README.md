@@ -1,15 +1,20 @@
-# CSCI5709 Tutorial 5 - Back-End Frameworks I
+# Tutorial 5: Back-End Frameworks I - Individual Deliverable
 * *Date Created*: 24 06 2021
 * *Last Modification Date*: 24 06 2021
+* *Grade Received*: 100%
 
-### Links
-* *GIT Repository* - <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_5>
-* *Deployment URL* - <http://dhrumil-amish-shah-csci5709-t5.herokuapp.com/>
+## Learning Outcomes
+* Work with the Back-End framework/library of your choice (i.e., the one you have decided to use for your project).
+* Understand how API calls are written in the Back-End framework/library you have chosen (i.e., Express.js or Flask).
+* Work individually to create a simple API.
 
-### Authors
+## Authors
 * [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
 
-### Prerequisites
+## Branch URL
+* [https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_5](https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_5)
+
+## Prerequisites
 To have a local copy of this project up and running on your local machine, you will first need to install the following 
 software/libraries/plugins
 
@@ -18,7 +23,7 @@ software/libraries/plugins
 
 See the following section for detailed step-by-step instructions on how to install this software/libraries/plugins.
 
-### Installing
+## Installing
 A step by step series of examples that tell you how to get a development env running. Let's use Node + NPM for this project.
 * Head to the official Node website to download and install Node, which also includes NPM.
 * Select the "Recommended For Most Users" button and download the current version for your Operating System.
@@ -29,18 +34,18 @@ A step by step series of examples that tell you how to get a development env run
 * Run "npm install" to install all the dependencies used by the app.
 * Finally, run "npm start" to see the app live on the localhost.
 
-### Available Scripts
+## Available Scripts
 ### `npm start`
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
 ### `npm build`
 Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes. Your app is ready to be deployed!
 
-### Deployment
+## Deployment
 For deployment of this application, I followed this article on [freeCodeCamp](https://freecodecamp.org/).<br/>
 Link - [How to deploy a NodeJS app to Heroku from Github](https://www.freecodecamp.org/news/how-to-deploy-a-nodejs-app-to-heroku-from-github-without-installing-heroku-on-your-machine-433bec770efe/)
 
-### Built With
+## Built With
 * [Node](https://nodejs.org/) - Backend JavaScript runtime built on [Chrome's V8 JavaScript engine](https://v8.dev/)
 * [NPM](https://www.npmjs.com/) - The package manager for [Node](https://nodejs.org/)
 * [Express](https://expressjs.com/) - Web framework for [Node](https://nodejs.org/)
@@ -50,13 +55,13 @@ Link - [How to deploy a NodeJS app to Heroku from Github](https://www.freecodeca
 * [Google Chrome](https://www.google.com/intl/en_in/chrome/) - Browser used to visualize the changes
 * [Postman](https://www.postman.com/) - The Platform for API Development
   
-### External Dependencies Used
+## External Dependencies Used
 * [express](https://www.npmjs.com/package/express) - Web framework for [Node](https://nodejs.org/).
 
-### Instructor
+## Instructor
 * [@gmosqueraj](https://github.com/gmosqueraj)
 
-### Teaching Assistants
+## Teaching Assistants
 * [@pishdude](https://github.com/pishdude)
 * [@GoenkaNikunj97](https://github.com/GoenkaNikunj97)
 * [@shehzeenhooda](https://github.com/shehzeenhooda)
