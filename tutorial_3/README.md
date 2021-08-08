@@ -1,26 +1,33 @@
-# CSCI5709 Tutorial 3 - Front-End Frameworks
-A simple React application with two pages. A `profile registration page` and a `profile page`.
-
+# Tutorial 3: Front-End Frameworks I - Individual Deliverable
 * *Date Created*: 25 05 2021
 * *Last Modification Date*: 24 06 2021
-* *GIT Repository*: <https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_3>
-* *URL*: <https://dhrumil-amish-shah-csci5709-t3.herokuapp.com/>
+* *Grade Received*: 100%
 
-### Authors
+## Learning Outcomes
+* Familiarize yourself with the Front-End framework/library of your choice (i.e., the one you have decided to use for your project).
+* Understand the general flow within the framework/library.
+* Work individually to create a simple interactive site.
+
+## Authors
 * [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
 
-### Getting Started with Create React App
+## Branch URL
+* [https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_3](https://github.com/DhrumilShah98/dhrumil-amish-shah-csci5709-all-tutorials/tree/tutorial_3)
+
+A simple React application with two pages. A `profile registration page` and a `profile page`.
+
+## Getting Started with Create React App
 * This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). According to the [React Documentation](https://reactjs.org/docs/create-a-new-react-app.html) create-react-app is one of the officially supported ways to create single-page applications in React.
 
-### Prerequisites
+## Prerequisites
 To have a local copy of this lab up and running on your local machine, you will first need to install the following software / libraries / plug-ins
 
-* [Node](https://nodejs.org/en/) - Download and install Node, which also includes NPM(Node Package Manager). Alternative to Node + NPM is [Yarn](https://yarnpkg.com/).
+* [Node](https://nodejs.org/en/) - Download and install Node, which also includes NPM(Node Package Manager).
 * [Visual Studio Code](https://code.visualstudio.com/) - Download and install VS Code or any Editor/IDE(Integrated Development Environment) of your choice. - Optional
 
 See the following section for detailed step-by-step instructions on how to install this software / libraries / plug-ins
 
-### Installing
+## Installing
 A step by step series of examples that tell you how to get a development env running. Let's use Node + NPM for this lab.
 
 ```
@@ -43,7 +50,7 @@ Run "npm install" to install all the dependencies used by the app.
 ```
 Finally, run "npm start" to see the app live on the localhost.
 ```
-### Available Scripts
+## Available Scripts
 ### `npm start`
 Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
@@ -54,10 +61,10 @@ Builds the app for production to the `build` folder. It correctly bundles React 
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### Deployment
+## Deployment
 All deployment options can be found at [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
-### Built With
+## Built With
 * [React](https://reactjs.org/) - Frontend framework
 * [Node](https://nodejs.org/) - Backend JavaScript runtime built on [Chrome's V8 JavaScript engine](https://v8.dev/)
 * [NPM](https://www.npmjs.com/) - The package manager for  [Node](https://nodejs.org/)
@@ -66,17 +73,17 @@ All deployment options can be found at [https://facebook.github.io/create-react-
 * [Visual Studio Code](https://code.visualstudio.com/download) - The source code editor used
 * [Google Chrome](https://www.google.com/intl/en_in/chrome/) - Browser used to visualize the changes
 
-### Acknowledgments
+## Acknowledgments
 * `Profile Registration` design inspiration - <https://dribbble.com/shots/13906301-Signup-form>
 * `Profile Page` background used - <https://www.svgbackgrounds.com/#pattern-randomized>
 * `Profile Page` card idea - <https://material-ui.com/components/cards/>
 * `Random images` courtsey - <https://unsplash.com/> and <https://source.unsplash.com/>
 * `Email regex` source - <https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript>
 
-### Instructor
+## Instructor
 * [@gmosqueraj](https://github.com/gmosqueraj)
 
-### Teaching Assistants
+## Teaching Assistants
 * [@pishdude](https://github.com/pishdude)
 * [@GoenkaNikunj97](https://github.com/GoenkaNikunj97)
 * [@shehzeenhooda](https://github.com/shehzeenhooda)
