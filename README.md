@@ -1,5 +1,6 @@
-# CSCI5709 All Tutorials
-
+# Dalhousie University | CSCI5709 | AWS (Advanced Web Services) | All Tutorials
+All tutorials completed in the course CSCI5709 Advanced Web Services. This repository contains a total of 6 tutorials.<br/>
+Final Grade Received - A+
 ## Authors
 * [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
 
