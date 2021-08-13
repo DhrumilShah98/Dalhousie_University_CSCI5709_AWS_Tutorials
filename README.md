@@ -2,7 +2,7 @@
 All tutorials completed in the course CSCI5709 Advanced Web Services. This repository contains a total of 6 tutorials.<br/>
 Final Grade Received - A+
 ## Authors
-* [Dhrumil Amish Shah](dh416386@dal.ca) - *(Creator)*
+* [Dhrumil Amish Shah](mailto:dh416386@dal.ca) - *(Creator)*
 
 ## Tutorials
 ### Tutorial 1: Application Frameworks - Group Deliverable (Group 6)
