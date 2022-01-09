@@ -1,5 +1,5 @@
-# Dalhousie University | CSCI5709 | AWS (Advanced Web Services) | All Tutorials
-All tutorials are completed in class CSCI5709 (Advanced Web Services) of MACS at Dalhousie University. This repository contains a total of 6 tutorials. CSCI5709 AWS Dalhousie University.<br/>
+# Dalhousie University | CSCI 5709 | AWS (Advanced Web Services) | All Tutorials
+All tutorials are completed in class CSCI 5709 (Advanced Web Services) of MACS at Dalhousie University. This repository contains a total of 6 tutorials. CSCI 5709 AWS Dalhousie University.<br/>
 Final Letter Grade Received - **A+**
 
 ## Authors
